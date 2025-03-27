@@ -1,0 +1,716 @@
+/* 아마스빈 메인 페이지 관련 css */
+
+/* reset */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+html,body{
+    color: #333;
+    overflow-x:hidden;
+    width: 100vw;
+    top: 0; left: 0;
+}
+
+ul,li{
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/* ============ quick menu ========== */
+.quick{
+    width: 180px; height: 400px;
+    position: fixed;
+    background-color: #98ee98;
+    z-index: 999;
+    border-radius: 30px;
+    top: 300px; right: 70px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.18);
+}
+
+.quick i{
+    display: block;
+    width: 40px; height: 40px;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    margin: 12px auto;
+    padding: 1px;
+    transition: 0.3s;
+}
+
+.quick i:hover{
+    color: #4DBD85;
+    width: 40px; height: 40px;
+    background-color: #333;
+    border-radius: 100%;
+}
+
+.quick img{
+    width: 110px;
+    display: block;
+    margin: 3px auto;
+}
+
+.quick button{ 
+    background-color: #333;
+    border: none;
+    border-radius: 50px;
+    width: 150px; height: 38px;
+    color: #98ee98;
+    margin-top: 10px;
+    margin-left: 14px;
+    cursor: pointer;
+}
+
+.quick button:hover{
+    background-color: #444;
+    color: #4DBD85;
+}
+
+/* ============ quick menu ========== */
+
+
+/* ==========중단점 1200px 일때  quick메뉴 사라지기 */
+@media (max-width : 1200px ) {
+    .quick {
+        display: none;
+    }
+}
+/* ========================================= */
+
+
+
+
+
+/* ============ header start ========== */
+header{
+    width: 100%; height: 250px;
+    background-color: #333;
+    position: relative;
+}
+
+/* .box_h{
+    width: 100%; height: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: -999;
+} */
+
+.logo{
+    display: block;
+    width: 140px;
+    margin: 0px auto ;
+    /* margin-top: 60px; */
+    margin-bottom: 50px;
+    padding-top: 60px;
+}
+
+header .inner{
+    width: 1340px; 
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+    top: 0; 
+    /* border: 1px solid red; */
+}
+
+
+header .gnb{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .gnb>li>a{
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+
+
+header .gnb li a{
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+
+header .sub{
+    display: none;
+    margin-top: 5px;
+    position: absolute;
+    z-index: 999;
+}
+
+header .sub>li>a{
+    font-family: 'Pretendard-Regular'; 
+    display: block;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+header .h-sns{
+    display: flex;
+}
+
+header .h-sns li{
+    padding-left: 14px;
+}
+
+header .util{
+    position: absolute;
+    top: 10px; right: 0;
+    z-index: 99;
+    /* background-color: chocolate; */
+    display: flex;
+}
+
+header .util>li>a{
+    padding: 20px 0;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    /* background-color: chocolate; */
+    margin-left: 20px;
+}
+
+.box_sub{
+    width: 100%; height: 100px;
+    background-color: #333;
+    position: fixed;
+    z-index: 99;
+    /* display: none; */
+}
+
+
+
+/* ==================================스크롤이벤트 관련========= */
+.scroll-e{
+    z-index: 9999;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2.5%;
+}
+
+.scroll-e a{
+    display: block;
+    width: 4px; height: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #999;
+    /* border: 1px solid #dcdcdc; */
+    transition: ease-in-out0 0.3s;
+}
+
+.scroll-e a.on{
+    height: 50px;
+    background-color: #4DBD85;
+    transition: ease-in-out 0.3s;
+}
+/* ==================================스크롤이벤트 관련========= */
+
+
+
+
+/* ================================= visual ========== */
+
+#visual{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 250px;
+    
+    /* position: relative; */
+}
+
+/* #visual .slide{
+    position: relative;
+} */
+
+#visual .slide li{
+    /* border-radius: 50%; */
+    height: 600px;
+    position: absolute;
+    /* border: 1px solid red; */
+}
+
+#visual .slide li img{
+    width: 100%;
+}
+
+
+/* ================================= visual end ========== */
+
+
+/* ================================= sec01 ========== */
+
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+#sec1{
+    width: 100%;
+    height: 1080px;
+    background-color: #C5F4A4;
+    margin-top: 650px;
+    /* border: 1px solid red; */
+    /* padding-top: 50px; */
+    /* position: relative; */
+    
+}
+
+#sec1 .con1{
+    width: 1340px;
+    margin: 0 auto;
+    /* position: absolute; */
+}
+
+
+.sec1-pic{
+    width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(-300px);
+}
+
+
+.sec1-pic li img{
+    display: block;
+    width: 200px; 
+    border-radius:100% ;
+    box-shadow:  0 10px 15px 0px rgba(0, 0, 0, 0.18);
+    animation: float 4s ease-in-out infinite;
+    transition: 0.3s ease;
+}
+
+.sec1-pic li img:hover {
+    transform: scale(1.2); /* 애니메이션 상태에 추가로 크기 변경 */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* 그림자 강조 */
+}
+
+
+/* 재료 둥실둥실 움직이는 효과 */
+.sec1-pic li:first-child{
+    transform: translateY(50px);
+}
+.sec1-pic li:nth-child(2){
+    transform: translateY(-30px);
+}
+.sec1-pic li:nth-child(3){
+    transform: translateY(50px);
+}
+.sec1-pic li:nth-child(4){
+    transform: translateY(-40px);
+}
+.sec1-pic li:nth-child(5){
+    transform: translateY(60px);
+}
+
+.sec1-pic li:nth-child(1) img {
+    animation-delay: 0s;
+}
+
+.sec1-pic li:nth-child(2) img {
+    animation-delay: 1.5s;
+}
+
+.sec1-pic li:nth-child(3) img {
+    animation-delay: 1s;
+}
+
+.sec1-pic li:nth-child(4) img {
+    animation-delay: 0.5s;
+}
+
+.sec1-pic li:nth-child(5) img {
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg) ;
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.con1 .txt{
+    width: 100%; height: 250px;
+    transform: translateY(-170px);
+    /* border: 1px solid #333; */
+}
+
+.con1 .txt h3{
+    font-family: 'Paperlogy-8ExtraBold';
+    font-size: 45px;
+    font-weight: normal;
+    /* width: 100%; */
+    text-align: center;
+    /* position: relative; */
+}
+
+.con1 .txt p{
+    font-family: Pretendard;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.con1 .txt button{
+    display: block;
+    border: 0;
+    width: 230px; height: 50px;
+    background-color: #333;
+    border-radius: 60px;
+    color: #98ee98;
+    font-size: 16px;
+    line-height: 40px;
+    margin: 50px auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+}
+
+.con1 .txt button:hover{
+    background-color: #51604d;
+}
+
+
+
+
+/* ================================= sec01 end ========== */
+
+
+/* ================================= sec02(메뉴) start ========== */
+#sec2{
+    width: 100%;
+    height: 1080px;
+    /* border: 1px solid red; */
+    padding-top: 100px;
+}
+
+#sec2 h2{
+    display: block;
+    text-align: center;
+    margin-top: 20px; margin-bottom: 10px;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 45px;
+    font-weight: bold;
+    color: #4DBD85;
+}
+
+#sec2 p{
+    font-family: 'Pretendard';
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 22px;
+}
+
+/* .sec2 .swiper{
+    width: 100%;
+    height: 550px;
+    border: 1px solid;
+} */
+
+/* .sec2 .swiper img{
+    width: 340px;
+    border: 1px solid;
+} */
+
+/* 슬라이드 기본 스타일 */
+.slider-container { 
+    width: 100%;
+    max-width: 1920px;
+    height: 650px;;
+    position: relative;
+    overflow-x: hidden ;
+    overflow-Y: visible ;
+    /* transform: translateX(-40px); */
+}
+
+.slider-wrapper{
+    width: 100%;
+    display: flex;
+    height: 500px;
+    /* justify-content: space-between; */
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item{
+    flex: 0 0 calc(100% / 5);
+    transition: 0.3s;
+    margin-left: 0px;
+    padding: 30px;
+}
+
+.slider-item img{
+    width: 100%;
+    display: block;
+}
+
+.slider-item h3 /*메뉴이름*/ {
+    display: block;
+    font-family: 'Pretendard';
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: medium;
+}
+
+/* 메인이미지 확대효과 */
+.slider-item.main{
+    transform: scale(1.3); /*110%확대*/
+}
+
+#sec2 button{
+    display: block;
+    border: 0;
+    width: 230px; height: 50px;
+    background-color: #333;
+    border-radius: 60px;
+    color: #98ee98;
+
+    font-family: 'Pretendard';
+    font-size: 16px;
+
+    line-height: 40px;
+    margin: 0px auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#sec2 button:hover{
+    background-color: #51604d;
+}
+
+
+/* ================================= sec02(메뉴) end ========== */
+
+/* ================================= sec03(프랜차이즈) start ========== */
+#sec3{
+    width: 100%;
+    height: 980px;
+    /* border: 1px solid; */
+}
+
+.s3-top{
+    width: 100%;
+    height: 100px;
+    background-color: #D4FCC9;
+}
+
+.s3-top ul{
+    width: 1340px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.s3-top ul li{
+    align-items: center;
+    /* margin-top: 20px; */
+}
+
+.s3-top ul li a{
+    display: block;
+    font-family: 'Pretendard';
+    font-size: 28px;
+    font-weight: bold;
+    /* padding: 12px 0; */
+    line-height: 100px;
+}
+
+.s3-top ul li a:hover{
+    color: #4DBD85;
+}
+
+.s3-top ul li:last-child{
+    transform: translateY(6px);
+}
+
+#sec3 .franchise{
+    width: 100%;
+    height: 900px;
+    background:url(../img/sec03_franchise/sec3_bg.png) ;
+    /* position: relative; */
+}
+
+#sec3 .con{
+    width: 1340px;
+    margin: 0 auto;
+}
+
+#sec3 .franchise>.con h2{
+    display: block;
+    /* text-align: center; */
+    padding-top: 160px;
+    /* margin-bottom: 10px; */
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 45px;
+    font-weight: bold;
+    color: #4DBD85;
+}
+
+#sec3 .franchise>.con p{
+    font-family: 'Pretendard';
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
+#sec3 .franchise>.con span{
+    display: block;
+    font-family: 'Pretendard';
+    margin-bottom: 20px;
+}
+
+/* ================================= 프랜차이즈 버튼 관련 */
+#sec3 .franchise>.con button{
+    cursor: pointer;
+    position: relative;
+}
+
+#sec3 .franchise>.con button{
+    width: 400px; height: 260px;
+    background-color: #98ee98;
+    border: 1px solid #4DBD85;
+    border-radius: 25px;
+    float: left;
+}
+
+#sec3 .franchise>.con button h4{
+    padding-bottom: 30px;
+    /* margin: 0px 30px 30px; */
+    /* width: 340px; */
+    font-family: 'Pretendard';
+    font-size: 24px;
+    color: #333;
+    display: block;
+    /* border-bottom: 1px solid #4DBD85; */
+    position: absolute;
+    top: 30px; left: 30px;
+}
+
+
+#sec3 .franchise>.con .btn-r{
+    float: left;
+    margin-left: 20px;
+}
+
+
+/* .sec3 .franchise>.con .btn-r h4{
+    padding: 30px 0;
+    margin: 0px 30px;
+    border-bottom: 1px solid #4DBD85;
+} */
+
+#sec3 .franchise>.con button .store {
+    position: absolute;
+    left: 30px; bottom: 30px;
+}
+
+#sec3 .franchise>.con button .arrow{
+    position: absolute;
+    bottom: 30px; right: 30px;
+}
+
+#sec3 .franchise>.con .btn-r:hover{
+    background-color: #c8fcc8;
+}
+#sec3 .franchise>.con .btn-l:hover{
+    background-color: #c8fcc8;
+}
+
+#sec3 .franchise>.con button:hover h4{
+    color: #4DBD85;
+}
+/* ================================= sec03(프랜차이즈) end ========== */
+
+
+
+/* ================================= footer start ========== */
+footer{
+    width: 100%;
+    height: 390px;
+    background-color: #333;
+    /* display: flex; */
+}
+
+footer .con{
+    width: 1340px;
+    margin: 0 auto;
+    display: flex;
+}
+
+footer .con .f-logo{
+    padding-top: 110px;
+}
+
+footer .con .f-right{
+    width: 1000px;
+    color: #fff;
+    margin-top: 110px;
+    margin-left: 50px;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 20px;
+}
+
+footer .con .f-right .f-address{
+    width: 100%;
+    display: flex;
+}
+
+footer .con .f-right .f-address li{
+    margin-right: 70px;
+}
+
+footer .con .f-right .f-b{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+footer .con .f-right .f-sns{
+    display: flex;
+    margin-right: 150px;
+    margin-top: 5px;
+}
+
+footer .con .f-right .f-sns li a{
+    margin-left: 10px;
+    opacity: 0.6;
+    transition: ease-in-out 0.2s;
+}
+
+footer .con .f-right .f-sns li a:hover{
+    opacity: 1;
+}
+
+/* ================================= footer end========== */

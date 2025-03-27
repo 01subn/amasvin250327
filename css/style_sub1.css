@@ -1,0 +1,693 @@
+/* sub 1 _ menu 관련 */
+
+
+/* reset */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+html,body{
+    color: #333;
+    overflow-x:hidden;
+    width: 100vw;
+    top: 0; left: 0;
+}
+
+ul,li{
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ============ quick menu ========== */
+.quick{
+    width: 180px; height: 400px;
+    position: fixed;
+    background-color: #98ee98;
+    z-index: 999;
+    border-radius: 30px;
+    top: 300px; right: 70px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.18);
+}
+
+.quick i{
+    display: block;
+    width: 40px; height: 40px;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    margin: 12px auto;
+    padding: 1px;
+    transition: 0.3s;
+}
+
+.quick i:hover{
+    color: #4DBD85;
+    width: 40px; height: 40px;
+    background-color: #333;
+    border-radius: 100%;
+}
+
+.quick img{
+    width: 110px;
+    display: block;
+    margin: 3px auto;
+}
+
+.quick button{ 
+    background-color: #333;
+    border: none;
+    border-radius: 50px;
+    width: 150px; height: 38px;
+    color: #98ee98;
+    margin-top: 10px;
+    margin-left: 14px;
+    cursor: pointer;
+}
+
+.quick button:hover{
+    background-color: #444;
+    color: #4DBD85;
+}
+
+/* ============ quick menu ========== */
+
+/* ==========중단점 1200px 일때  quick메뉴 사라지기 */
+@media (max-width : 1200px ) {
+    .quick {
+        display: none;
+    }
+}
+/* ========================================= */
+
+
+
+/* ============ header start ========== */
+header{
+    width: 100%; height: 250px;
+    background-color: #333;
+    position: relative;
+}
+
+/* .box_h{
+    width: 100%; height: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: -999;
+} */
+
+.logo{
+    display: block;
+    width: 140px;
+    margin: 0px auto ;
+    /* margin-top: 60px; */
+    margin-bottom: 50px;
+    padding-top: 60px;
+}
+
+header .inner{
+    width: 1340px; 
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+    top: 0; 
+    /* border: 1px solid red; */
+}
+
+
+header .gnb{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .gnb>li>a{
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+
+
+header .gnb li a{
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+
+header .sub{
+    display: none;
+    margin-top: 5px;
+    position: absolute;
+    z-index: 999;
+}
+
+header .sub>li>a{
+    font-family: 'Pretendard-Regular'; 
+    display: block;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+header .h-sns{
+    display: flex;
+}
+
+header .h-sns li{
+    padding-left: 14px;
+}
+
+header .util{
+    position: absolute;
+    top: 10px; right: 0;
+    z-index: 99;
+    /* background-color: chocolate; */
+    display: flex;
+}
+
+header .util>li>a{
+    padding: 20px 0;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    /* background-color: chocolate; */
+    margin-left: 20px;
+}
+
+.box_sub{
+    width: 100%; height: 100px;
+    background-color: #333;
+    position: fixed;
+    z-index: 99;
+    /* display: none; */
+}
+
+/* ==================================스크롤이벤트 관련========= */
+.scroll-e{
+    z-index: 9999;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2.5%;
+}
+
+.scroll-e a{
+    display: block;
+    width: 4px; height: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #dcdcdc;
+    /* border: 1px solid #dcdcdc; */
+    transition: ease-in-out0 0.3s;
+}
+
+.scroll-e a.on{
+    height: 50px;
+    background-color: #4DBD85;
+    transition: ease-in-out 0.3s;
+}
+/* ==================================스크롤이벤트 관련========= */
+
+
+/* ============================== top title ========================= */
+
+.title{
+    width: 100%; height: 350px;
+    /* border: 1px solid red; */
+    top: 0%;
+    position: relative;
+    overflow: hidden;
+    z-index: -99;
+}
+
+.title video{
+    display: block;
+    margin: 0 auto;
+    position:absolute;
+    max-width: 100%;
+    z-index: -99;
+}
+
+.title h2{
+    font:40px solid arial;
+    position: absolute;
+    display: block;
+    top: 125px;
+    left: 50%;
+    z-index: 99;
+    transform: translateX(-50%);
+    font-family: "Montserrat", serif;
+    font-weight:700;
+}
+/* ============================== top title ========================= */
+
+
+/* ============================== sec01 start ========================= */
+#sec1 {
+    padding-top: 5px;
+    width: 100%; height: 900px;
+}
+
+.con1{
+    width: 1340px; height: 100%;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+.con1 h3{ /*제목*/
+    display: block;
+    text-align: center;
+    color: #4DBD85;
+    margin-top: 120px;
+    font-family: "Montserrat", serif;
+    font-weight:700;
+    font-size: 35px;
+}
+
+.con1 h4{ /*소제목*/
+    display: block;
+    text-align: center;
+    color: #333;
+
+    font-family: 'Pretendard'; 
+    font-size: 20px;
+    margin: 10px 0 50px;
+}
+
+
+dl{
+    width: 1340px;
+    height: 600px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+dl dt{
+    width: 166px; height: 600px;
+    width: white;
+    border: 1px solid #4DBD85;
+    float: left;
+
+    /* writing-mode: vertical-lr;
+    text-orientation: upright; */
+
+    color: #4DBD85;
+    background-color: #fff;
+
+    font-family: "Montserrat", serif;
+    font-size: 30px; font-weight:700;
+    padding-top:34px; padding-left: 30px;
+}
+
+dl dt.active{
+    background-color: #4DBD85;
+    color: #fff;
+    
+}
+
+dl dd{
+    width: 673px; height: 100%;
+    float: left;
+}
+/* ============================== sec01 end ========================= */
+
+
+/* ============================== modal(메뉴 상세정보) ========================= */
+.modal_01{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_02{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_03{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_04{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_05{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_06{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_07{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_08{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_09{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_10{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+.modal_11{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; left: 0;
+    z-index: 9999;
+}
+
+
+.popup{
+    width: 950px; height: 400px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.popup a i{
+    display: block;
+    font-size: 28px;
+    position: absolute;
+    top: 30px; right: 32px;
+}
+
+.modal-b{
+    width: 350px; height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: #98ee98;
+    color:#333;
+    cursor: pointer;
+    position: absolute;
+    bottom: 250px; left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal-b:hover {
+    background-color: #91ce71;
+    color: #fff;
+}
+
+/* ============================== modal(메뉴 상세정보) ========================= */
+
+
+
+
+/* ============================== sec02 start (신메뉴/베스트 메뉴)========================= */
+#sec2 {
+    padding-top: 5px;
+    width: 100%; height: 980px;
+}
+
+.menu1{
+    width: 1340px; height: 60px;
+}
+
+.tab1{
+    width: 100%; height: 60px;
+    display: flex;
+    background-color: #efefef;
+    border-radius: 90px;
+}
+
+.tab1 li{
+    width: 670px; height: 60px;
+    /* background-color: #98ee98; */
+}
+
+.tab1 li a{
+    display: block;
+    text-align: center;
+    align-items: center;
+    line-height: 63px;
+    transition: 0.6s;
+
+    font-family: "Montserrat", serif;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.tab1 li a.selected{
+    width: 670px; height: 60px;
+    background-color: #98ee98;
+    border-radius:90px ;
+}
+
+.panel1 {
+    width: 100%; height: 640px;
+    border: 1px solid #4DBD85;
+    border-radius: 30px;
+    margin-top: 25px;
+}
+
+.panel1 li{
+    transition: 0.8s;
+}
+
+.new{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.new li a img{
+    width: 280px;
+}
+
+.con-1-2 .best1, .con-1-2 .best2{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 80px;
+}
+
+.con-1-2 p{
+    display: block;
+    width: 150px;
+    text-align: center;
+    margin-top: 7px;
+    font-family: 'Pretendard'; 
+    font-weight: normal;
+}
+
+.con-1-2 img {
+    width: 150px;
+}
+
+/* ============================== sec02 end (신메뉴/베스트 메뉴)========================= */
+
+
+
+/* ====================================== sec03 (amasvin drink) start ===================== */
+#sec3{
+    padding-top: 3px;
+    width: 100%; height: 1400px;
+    margin-bottom: 100px;
+}
+
+#sec3 .menu2{
+    width: 1340px; height: 1210px;
+    border: 1px solid #4DBD85;
+    border-radius: 30px;
+}
+
+#sec3 .tab2{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight:600;
+}
+
+#sec3 .tab2 .active{
+    color: #4DBD85;
+}
+
+#sec3 .menu2 .all_1{
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 80px;
+    /* margin-bottom: 50px; */
+}
+
+#sec3 .menu2 li a img:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+#sec3 .menu2 li p{
+    display: block;
+    width: 150px;
+    font-family: 'Pretendard'; 
+    font-weight: normal;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#sec3 .menu2 img{
+    width: 150px;
+}
+/* ====================================== sec03 (amasvin drink) end ===================== */
+
+
+
+
+/* ====================================== sec04 (amasvin bakery) start ===================== */
+#sec4{
+    padding-top: 3px;
+    width: 100%; height: 980px;
+}
+
+#sec4 .con-3{
+    width: 1340px; height: 600px;
+    border: 1px solid #4DBD85;
+    border-radius: 30px;
+}
+
+#sec4 .bakery1{
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 60px;
+}
+
+#sec4 .bakery1 li a img{
+    width: 190px;
+}
+
+#sec4 .bakery1 li a img:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+#sec4 .bakery1 li p{
+    display: block;
+    width: 190px;
+    font-family: 'Pretendard'; 
+    font-weight: normal;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* ====================================== footer start ===================== */
+footer{
+    width: 100%;
+    height: 390px;
+    background-color: #333;
+    /* display: flex; */
+}
+
+footer .con{
+    width: 1340px;
+    margin: 0 auto;
+    display: flex;
+}
+
+footer .con .f-logo{
+    padding-top: 110px;
+}
+
+footer .con .f-right{
+    width: 1000px;
+    color: #fff;
+    margin-top: 110px;
+    margin-left: 50px;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 20px;
+}
+
+footer .con .f-right .f-address{
+    width: 100%;
+    display: flex;
+}
+
+footer .con .f-right .f-address li{
+    margin-right: 70px;
+}
+
+footer .con .f-right .f-b{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+footer .con .f-right .f-sns{
+    display: flex;
+    margin-right: 150px;
+    margin-top: 5px;
+}
+
+footer .con .f-right .f-sns li a{
+    margin-left: 10px;
+    opacity: 0.5;
+    transition: ease-in-out 0.3s;
+}
+
+
+footer .con .f-right .f-sns li a:hover{
+    opacity: 1;
+}
